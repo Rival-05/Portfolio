@@ -5,22 +5,24 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    --foreground: #e5e7eb;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+  max-width: 42rem; /* Sets a maximum width for the content inside the body (e.g., 42rem or 672px) */
+  margin-left: auto; /* Centers the content horizontally within the max-width */
+  margin-right: auto;
+  padding-top: 3rem; /* Adds vertical padding (top and bottom) of 3rem (48px) by default */
+  padding-bottom: 3rem;
+  padding-left: 1.5rem; /* Adds horizontal padding (left and right) of 1.5rem (24px) */
+  padding-right: 1.5rem;
+  -webkit-font-smoothing: antialiased; /* Smooths font rendering for better readability */
+  -moz-osx-font-smoothing: grayscale;
 }
