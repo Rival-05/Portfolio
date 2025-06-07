@@ -19,10 +19,10 @@ body {
   max-width: 42rem; /* Sets a maximum width for the content inside the body (e.g., 42rem or 672px) */
   margin-left: auto; /* Centers the content horizontally within the max-width */
   margin-right: auto;
-  padding-top: 3rem; /* Adds vertical padding (top and bottom) of 3rem (48px) by default */
-  padding-bottom: 3rem;
-  padding-left: 1.5rem; /* Adds horizontal padding (left and right) of 1.5rem (24px) */
-  padding-right: 1.5rem;
+  padding-top: 2rem; /* Adds vertical padding (top and bottom) of 3rem (48px) by default */
+  padding-bottom: 2rem;
+  padding-left: 1rem; /* Adds horizontal padding (left and right) of 1.5rem (24px) */
+  padding-right: 1rem;
   -webkit-font-smoothing: antialiased; /* Smooths font rendering for better readability */
   -moz-osx-font-smoothing: grayscale;
 }

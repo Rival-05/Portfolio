@@ -27,6 +27,9 @@ export const Techie = () => {
                     <img src="/util/git.png" alt="git" className="w-5 h-5 rounded-full " />
                     <span>git</span>
                 </div>
+                <div className="flex flex-row gap-3 items-center justify-between px-2 py-2 border border-transparent dark:border-zinc-700 border-zinc-200 cursor-pointer trasition-all duration-300 hover:-translate-y-1 hover:shadow-md rounded-lg text-sm font-medium tracking-tight">
+                    <img src="/util/shit.jpeg" alt="git" className='h-4' />
+                </div>
             </div>
     )
 }
