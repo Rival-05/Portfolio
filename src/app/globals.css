@@ -12,6 +12,10 @@
   }
 }
 
+.underlining-links{
+  @apply underline underline-offset-2 decoration-gray-600 transition-all duration-200 hover:decoration-gray-400 cursor-pointer decoration-2;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
