@@ -1,4 +1,3 @@
-import { HoverBorderGradient } from "@/my_components/HoverBoardGradient";
 import { Nav } from "@/my_components/navbar";
 import { Sextion } from "@/my_components/section";
 

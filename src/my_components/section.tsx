@@ -3,6 +3,7 @@ import { Techie } from "@/my_components/techstack";
 import { Achieved } from "./achievements";
 import { Bookameat } from "./bookameet";
 import { Ad } from "./ad";
+import { Contactdiv } from "./contactdiv";
 
 export const Sextion = () =>{
     return(
@@ -22,6 +23,8 @@ export const Sextion = () =>{
             <Achieved />
             <hr className="mt-5 border-zinc-800"/>
             <Ad />
+            <hr className="mt-5 border-zinc-800"/>
+            <Contactdiv />
         </div>
         </section>
     )
