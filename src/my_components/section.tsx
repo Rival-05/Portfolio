@@ -8,8 +8,8 @@ import { Contactdiv } from "./contactdiv";
 export const Sextion = () =>{
     return(
         <section className="flex-col justify-center items-center py-3">
-        <h1 className="text-2xl text-[#FFFFFF] font-medium tracking-tight">dev ~ i debug in prod btw.</h1>
-        <div className="flex flex-col mt-5 text-gray-300 leading-relaxed ">
+        <h1 className="text-2xl dark:text-[#FFFFFF] text-[#000000] font-medium tracking-tight">dev ~ i debug in prod btw.</h1>
+        <div className="flex flex-col mt-5 dark:text-gray-300 text-[#333333] leading-relaxed ">
             <p className="tracking-wide">i'm a 21-year-old and a final year web developer <br />
             and an active member of the dev-community. From debugging <br />at 2am to shipping side
             projects for fun, I love building clean,<br /> functional web apps that just work.
@@ -21,9 +21,9 @@ export const Sextion = () =>{
             <Techie />
             <Bookameat />
             <Achieved />
-            <hr className="mt-5 border-zinc-800"/>
+            <hr className="mt-5 border-zinc-700"/>
             <Ad />
-            <hr className="mt-5 border-zinc-800"/>
+            <hr className="mt-5 border-zinc-700"/>
             <Contactdiv />
         </div>
         </section>

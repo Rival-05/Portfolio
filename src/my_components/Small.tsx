@@ -8,12 +8,12 @@ export const Last = () => {
             <div className='flex justify-between mt-4'>
                 <p>© 2025<a href="#" className="underlining-links text-sm" >  rival.me </a></p>
                 <div className="flex gap-3 text-lg">
-                <a href="https://x.com/Rival_o5" target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaTwitter /></a>
-                <a href="https://www.linkedin.com/in/rivalo5/" target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaLinkedin /></a>
-                <a href="https://github.com/Rival-05" target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaGithub /></a>
-                <a href="https://www.instagram.com/rivalxdezines/" target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaInstagram /></a>
-                <a href="mailto:rivalo3.chat@gmail.com" className="hover:text-white"><FaEnvelope /></a>
-                <a href="#" className="hover:text-white"><FaPaperclip /></a>
+                <a href="https://x.com/Rival_o5" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500"><FaTwitter /></a>
+                <a href="https://github.com/Rival-05" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500"><FaGithub /></a>
+                <a href="https://www.linkedin.com/in/rivalo5/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500"><FaLinkedin /></a>
+                <a href="https://www.instagram.com/rivalxdezines/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600"><FaInstagram /></a>
+                <a href="mailto:rivalo3.chat@gmail.com" className="hover:text-orange-300"><FaEnvelope /></a>
+                <a href="#" className="hover:text-purple-400"><FaPaperclip /></a>
             </div>
             </div>
         </small>  

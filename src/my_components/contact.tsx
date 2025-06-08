@@ -38,8 +38,8 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-[70%] sm:w-[50%] justify-between px-3 py-2 border-2 dark:border-zinc-700 border-zinc-200 trasition-all duration-300 hover:shadow-md rounded-md text-sm font-medium ">
-      <h1 className="font-medium text-xl py-2 text-[#FFFFFF] text-center tracking-tighter">Work with me</h1>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-[70%] sm:w-[50%] justify-between px-3 py-2 border dark:border-2 border-zinc-700 trasition-all duration-300 hover:shadow-md rounded-md text-sm font-medium ">
+      <h1 className="font-medium text-xl py-2 dark:text-[#FFFFFF] text-[#000000] text-center tracking-tighter">Work with me</h1>
 
       <input
         type="text"
@@ -47,7 +47,7 @@ export default function ContactForm() {
         placeholder="Name"
         value={form.name}
         onChange={handleChange}
-        className="w-full py-1 px-2 border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal text-gray-300"
+        className="w-full py-1 px-2 border dark:border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal dark:text-gray-200 text-[#000000]"
       />
 
       <input
@@ -56,7 +56,7 @@ export default function ContactForm() {
         placeholder="Your Email"
         value={form.email}
         onChange={handleChange}
-        className="w-full py-1 px-2 border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal text-gray-300"
+        className="w-full py-1 px-2 border dark:border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal dark:text-gray-200 text-[#000000]"
       />
 
       <textarea
@@ -64,12 +64,12 @@ export default function ContactForm() {
         placeholder="Your Message"
         value={form.message}
         onChange={handleChange}
-        className="min-h-20 resize-none overflow-hidden w-full py-1 px-2 border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal text-gray-300"
+        className="min-h-20 resize-none overflow-hidden w-full py-1 px-2 border dark:border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal dark:text-gray-200 text-[#000000]"
       ></textarea>
 
       <button
         type="submit"
-        className="w-full py-2 bg-blue-600 text-gray-300 hover:text-gray-400 rounded-lg hover:bg-blue-700 transition-all duration-300"
+        className="w-full py-2 dark:bg-blue-600 bg-blue-500 dark:text-gray-300 text-gray-800 hover:text-gray-900 hover:bg-blue-600 dark:hover:text-gray-100 rounded-lg dark:hover:bg-blue-700 transition-all duration-300"
       >
         Send Message
       </button>
