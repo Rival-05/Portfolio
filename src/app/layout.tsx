@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
+import { ThemeInitScript } from "@/my_components/ThemeInitScript";
 
 export const metadata: Metadata = {
   title: "rival.me",
@@ -13,8 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-       <body className = {GeistSans.className} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
+      <head><ThemeInitScript/></head>
+       <body className = {`$GeistSans.className`} suppressHydrationWarning>
         {children}
       </body>
     </html>
