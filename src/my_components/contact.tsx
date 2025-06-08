@@ -38,7 +38,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2  w-[60%] md:w-[50%] justify-between px-3 py-2 border-2 dark:border-zinc-700 border-zinc-200 trasition-all duration-300 hover:shadow-md rounded-md text-sm font-medium ">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-[70%] sm:w-[50%] justify-between px-3 py-2 border-2 dark:border-zinc-700 border-zinc-200 trasition-all duration-300 hover:shadow-md rounded-md text-sm font-medium ">
       <h1 className="font-medium text-xl py-2 text-[#FFFFFF] text-center tracking-tighter">Work with me</h1>
 
       <input
@@ -69,7 +69,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+        className="w-full py-2 bg-blue-600 text-gray-300 hover:text-gray-400 rounded-lg hover:bg-blue-700 transition-all duration-300"
       >
         Send Message
       </button>
