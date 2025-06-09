@@ -20,7 +20,7 @@
 }
 
 .underlining-links{
-  @apply underline underline-offset-2 decoration-gray-600 transition-all duration-200 hover:decoration-gray-400 cursor-pointer decoration-2;
+  @apply underline underline-offset-2 decoration-gray-600 transition-all duration-100 hover:decoration-gray-400 dark:hover:text-[#ffffff] cursor-pointer decoration-2;
 }
 
 body {

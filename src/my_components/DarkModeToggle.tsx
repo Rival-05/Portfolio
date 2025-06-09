@@ -24,7 +24,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="py-2 md:mt-0 mt-4 rounded-full transition-opacity duration-100  hover:opacity-70 cursor-pointer"
+      className="py-2 md:mt-0 mt-4 rounded-full outline-none transition-opacity duration-100  hover:opacity-70 cursor-pointer"
       aria-label="Toggle Dark Mode"
     >
       <svg

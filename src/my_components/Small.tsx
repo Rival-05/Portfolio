@@ -9,7 +9,7 @@ export const Last = () => {
                 <p>© 2025<a href="#" className="underlining-links text-sm" >  rival.me </a></p>
                 <div className="flex gap-3 text-lg">
                 <a href="https://x.com/Rival_o5" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500"><FaTwitter /></a>
-                <a href="https://github.com/Rival-05" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500"><FaGithub /></a>
+                <a href="https://github.com/Rival-05" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 dark:hover:text-[#ffffff] dark:text-gray-300"><FaGithub /></a>
                 <a href="https://www.linkedin.com/in/rivalo5/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500"><FaLinkedin /></a>
                 <a href="https://www.instagram.com/rivalxdezines/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600"><FaInstagram /></a>
                 <a href="mailto:rivalo3.chat@gmail.com" className="hover:text-orange-300"><FaEnvelope /></a>
