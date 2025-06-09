@@ -8,19 +8,19 @@ export const Achieved = () => {
                 <ol className='list-disc text-[#222222] dark:text-gray-300 items-center'>
                     <li >
                         <div className='flex-row gap-2 items-center mt-2'>
-                            <a href="#" className="underlining-links">Anonymous</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Rival-05/Nameless" className="underlining-links">Anonymous</a>
                             <span className='flex-wrap text-[15px]'> - A real-time, identity-free application using anonymous user chat sessions. June 2o25</span>
                         </div>
                     </li>
                     <li >
-                        <div className='flex-row  gap-2 items-center mt-2'>
+                        <div  className='flex-row  gap-2 items-center mt-2'>
                             <a href="#" className="underlining-links">Dorm-desk</a>
                             <span className='flex-wrap text-[15px]'> - Streamlined issue tracking and resolution within the hostel premises. June 2o25</span>
                         </div>
                     </li>
                     <li >
                         <div className='flex-row gap-2 items-center mt-2'>
-                            <a href="#" className="underlining-links">AttendEase</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Rival-05/face_recognition_based_attendance_system" className="underlining-links">AttendEase</a>
                             <span className='flex-wrap text-[15px]'> - face recognition for fast, contactless, and accurate verification. Jan 2o25</span>
                         </div>
                     </li>

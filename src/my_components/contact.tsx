@@ -47,7 +47,7 @@ export default function ContactForm() {
         placeholder="Name"
         value={form.name}
         onChange={handleChange}
-        className="w-full py-1 px-2 border dark:border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal dark:text-gray-200 text-[#000000]"
+        className="contact-box"
       />
 
       <input
@@ -56,7 +56,7 @@ export default function ContactForm() {
         placeholder=" Slide your e-mail"
         value={form.email}
         onChange={handleChange}
-        className="w-full py-1 px-2 border dark:border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal dark:text-gray-200 text-[#000000]"
+        className="contact-box"
       />
 
       <textarea
@@ -64,7 +64,7 @@ export default function ContactForm() {
         placeholder="Drop your idea like a pro..."
         value={form.message}
         onChange={handleChange}
-        className="min-h-20 resize-none overflow-hidden w-full py-1 px-2 border dark:border-2 outline-none rounded-lg border-zinc-700 focus:border-zinc-600 font-normal dark:text-gray-200 text-[#000000]"
+        className="min-h-20 resize-none overflow-hidden contact-box"
       ></textarea>
 
       <button
