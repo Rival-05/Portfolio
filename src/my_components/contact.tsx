@@ -33,6 +33,7 @@ export default function ContactForm() {
         setStatus("Failed to send message. Try again later.");
       }
     } catch (error) {
+      console.error("Hang out form error:", error);
       setStatus("An error occurred.");
     }
   };
