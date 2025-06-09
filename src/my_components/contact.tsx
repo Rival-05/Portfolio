@@ -39,7 +39,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-[70%] sm:w-[50%] justify-between px-3 py-2 border dark:border-2 border-zinc-700 trasition-all duration-300 hover:shadow-md rounded-md text-sm font-medium ">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-[100%] sm:w-[50%] justify-between px-3 py-2 border dark:border-2 border-zinc-700 trasition-all duration-300 hover:shadow-md rounded-md text-sm font-medium ">
       <h1 className="font-medium text-xl py-2 dark:text-[#FFFFFF] text-[#000000] text-center cursor-default tracking-tighter">Hang-out with me</h1>
 
       <input
