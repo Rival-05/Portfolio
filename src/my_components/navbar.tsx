@@ -6,7 +6,7 @@ export const Nav = () =>{
         <nav className="py-5 mb-3 lg:mb-10 md:mb-10">
           <div className="flex flex-row md:items-center justify-between">
               <div className="flex items-center outline-none ">
-                  <a href="#" className="flex-none lg:flex items-center gap-3 text-3xl font-semibold text-[#000000] dark:text-[#FFFFFF] antialiased tracking-tight">rival.me
+                  <a href="https://x.com/Rival_o5" className="flex-none lg:flex items-center gap-3 text-3xl font-semibold text-[#000000] dark:text-[#FFFFFF] antialiased tracking-tight">rival.me
                   <Glow />  
                   </a>   
               </div>
