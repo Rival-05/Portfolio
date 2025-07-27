@@ -7,7 +7,7 @@ export const VisitorCount = () => {
 
     useEffect(() => {
         const alreadyCounted = localStorage.getItem('hasVisited');
-        let url = '/api/visits' + (alreadyCounted ? '?getOnly=1' : ''); 
+        const url = '/api/visits' + (alreadyCounted ? '?getOnly=1' : ''); 
         fetch(url)
             .then((res) => res.json())
             .then((data) => {
