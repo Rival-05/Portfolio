@@ -12,13 +12,22 @@ export const Sextion = () =>{
         <h1 className="text-2xl dark:text-[#FFFFFF] text-[#000000] font-medium tracking-tight">dev ~ i debug in prod btw.</h1>
         <div style={{ wordSpacing: '1px' }} className="flex flex-col cursor-default mt-5 dark:text-[#D4D4D4] text-[#333333] tracking-tight leading-relaxed">
             
-            <div className="flex justify-between">
-                <p className="tracking-normal">i&apos;m a 21-year-old and a final year web developer 
-                and an <br /> active member of the dev-community. From <br /> debugging at 2am to shipping side
-                projects for fun, I love building <br /> clean, functional web apps that just work.
+            <div className="flex flex-row justify-between items-start gap-4 md:gap-8">
+                <p className="tracking-normal text-base leading-relaxed">
+                    I'm a 21-year-old and a final year web developer 
+                    and an <br className="hidden md:block" /> active member of the dev-community. From <br className="hidden md:block" />
+                    debugging at 2am to shipping side projects for fun, I love building <br className="hidden md:block" /> 
+                    clean, functional web apps that just work.
                 </p>
-                <Image src="/util/dp.jpg"  alt="profile-pic" width={100} height={100} className="rounded-sm"/>
+                <Image 
+                    src="/util/dp.jpg"  
+                    alt="profile-pic" 
+                    width={100} 
+                    height={100} 
+                    className="rounded-sm object-cover self-center md:self-start"
+                />
             </div>
+
             
             <p className="tracking-wide mt-5 mb-4">Meanwhile you can find me on the field playing cricket, 
             <br />or chilling and shitposting on <a href="https://x.com/Rival_o5" className="underlining-links">X</a>.
