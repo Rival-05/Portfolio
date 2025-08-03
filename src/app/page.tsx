@@ -1,6 +1,6 @@
-import { Nav } from "@/my_components/navbar";
-import { Sextion } from "@/my_components/section";
-import { Last } from "@/my_components/Small";
+import { Nav } from "@/my_components/Navbar/navbar";
+import { Sextion } from "@/my_components/Middle_section/section";
+import { Last } from "@/my_components/Footer/Small";
 
 export default function Home() {
   return (

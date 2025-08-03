@@ -6,7 +6,6 @@ export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
-    // Check local storage or system preference
     const stored = localStorage.getItem('theme')
     if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
@@ -15,10 +14,30 @@ export default function DarkModeToggle() {
   }, [])
 
   const toggleTheme = () => {
-    const newTheme = isDark ? 'light' : 'dark'
-    document.documentElement.classList.toggle('dark', newTheme === 'dark')
-    localStorage.setItem('theme', newTheme)
-    setIsDark(!isDark)
+    const blob = document.createElement('div')
+    blob.className = `blob-animation`
+    blob.style.backgroundColor = isDark ? '#e9fbe8' : '#121212'
+    document.body.appendChild(blob)
+
+    // Force transition
+    requestAnimationFrame(() => {
+      blob.classList.add('animate')
+    })
+
+    setTimeout(() => {
+      const newTheme = isDark ? 'light' : 'dark'
+      document.documentElement.classList.toggle('dark', newTheme === 'dark')
+      localStorage.setItem('theme', newTheme)
+      setIsDark(!isDark)
+
+      // Prevent flash by applying background manually
+      document.body.style.backgroundColor = isDark ? '#ffffff' : '#000000'
+    }, 400)
+
+    setTimeout(() => {
+      document.body.style.backgroundColor = ''
+      blob.remove()
+    }, 1000)
   }
 
   return (

@@ -1,4 +1,3 @@
-// components/ContactForm.tsx
 'use client';
 import { useState } from "react";
 
@@ -12,8 +11,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // Simple frontend validation
+
     if (!form.name || !form.email || !form.message) {
       setStatus("Please fill all the fields.");
       return;
@@ -70,9 +68,9 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full py-2 dark:bg-blue-600 bg-blue-500 dark:text-gray-300 text-gray-800 hover:text-gray-900 hover:bg-blue-600 dark:hover:text-gray-100 rounded-lg dark:hover:bg-blue-700 transition-all duration-300"
+        className="w-full py-2 cursor-pointer dark:bg-blue-600/30 bg-blue-500 dark:text-blue-600  text-white  hover:bg-blue-600 dark:hover:text-blue-600 rounded-lg dark:hover:bg-blue-600/20 transition-all duration-300 tracking-wide"
       >
-        Ship It ⚡
+        Ship It 
       </button>
 
       {status && <p className="text-center text-sm text-red-500">{status}</p>}

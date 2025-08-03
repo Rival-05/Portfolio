@@ -7,13 +7,6 @@
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #e5e7eb;
-  }
-} */
-
 .dark{
   --background: #121212;
   --foreground: #e5e7eb;
@@ -34,14 +27,34 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
-  max-width: 42rem; /* Sets a maximum width for the content inside the body (e.g., 42rem or 672px) */
-  margin-left: auto; /* Centers the content horizontally within the max-width */
+  min-height: 100vh; 
+  max-width: 42rem; 
+  margin-left: auto; 
   margin-right: auto;
-  padding-top: 2rem; /* Adds vertical padding (top and bottom) of 3rem (48px) by default */
+  padding-top: 2rem; 
   padding-bottom: 2rem;
-  padding-left: 1rem; /* Adds horizontal padding (left and right) of 1.5rem (24px) */
+  padding-left: 1rem; 
   padding-right: 1rem;
-  -webkit-font-smoothing: antialiased; /* Smooths font rendering for better readability */
+  -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
 }
+
+.blob-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  z-index: 100;
+  pointer-events: none;
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.4s ease;
+}
+
+.blob-animation.animate {
+  width: 2500px;
+  height: 2500px;
+}
+
