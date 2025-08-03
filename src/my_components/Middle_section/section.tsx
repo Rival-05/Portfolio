@@ -14,7 +14,7 @@ export const Sextion = () =>{
             
             <div className="flex flex-row justify-between items-start gap-4 md:gap-8">
                 <p className="tracking-normal text-base leading-relaxed">
-                    I'm a 21-year-old and a final year web developer 
+                    I&apos;m a 21-year-old and a final year web developer 
                     and an <br className="hidden md:block" /> active member of the dev-community. From <br className="hidden md:block" />
                     debugging at 2am to shipping side projects for fun, I love building <br className="hidden md:block" /> 
                     clean, functional web apps that just work.
