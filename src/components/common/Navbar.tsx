@@ -31,7 +31,7 @@ export default function Navbar() {
           </Link>
 
           {/* Navigation Links */}
-          <nav className="flex items-center space-x-1">
+          <nav className="flex items-center space-x-2">
             {navigationConfig.mainNav.map((item) => (
               <Link key={item.href} href={item.href}>
                 <Button
