@@ -2,7 +2,6 @@ import { heroConfig, skillComponents, socialLinks } from "@/config/Hero";
 import { parseTemplate } from "@/lib/hero";
 import { cn } from "@/lib/utils";
 import { Link } from "next-view-transitions";
-
 import Container from "../common/Container";
 import Skill from "../common/Skill";
 import Chat from "../svgs/Chat";
