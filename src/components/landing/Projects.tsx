@@ -12,7 +12,9 @@ export default function Projects() {
       <ProjectList className="mt-6" projects={projects.slice(0, 4)} />
       <div className="mt-6 flex justify-center">
         <Link href="/projects">
-          <Button>View All Projects</Button>
+          <Button variant="default" size="sm">
+            View All Projects
+          </Button>
         </Link>
       </div>
     </Container>

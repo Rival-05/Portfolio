@@ -8,6 +8,6 @@ export interface Project {
     github?: string;
     details: boolean;
     isworking: boolean;
-    projectDetailsPageSlug: string;
+    whatIBuilt?: string[];
 }
 

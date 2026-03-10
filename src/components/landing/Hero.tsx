@@ -52,7 +52,7 @@ export default function Hero() {
           <span className="bg-linear-to-b from-gray-500 via-gray-700 to-gray-800 bg-clip-text text-transparent">
             Hi, I&apos;m {name} —
           </span>{" "}
-          <span className="text-primary/30">{title}</span>
+          <span className="text-primary/40">{title}</span>
         </h1>
 
         <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base whitespace-pre-wrap text-neutral-700 md:text-lg">
@@ -79,26 +79,6 @@ export default function Hero() {
             </Button>
           );
         })}
-      </div>
-
-      {/* Social Links */}
-      <div className="mt-8 flex gap-2">
-        {socialLinks.map((link) => (
-          <Tooltip key={link.name} delayDuration={0}>
-            <TooltipTrigger asChild>
-              <Link
-                href={link.href}
-                key={link.name}
-                className="text-secondary flex items-center gap-2"
-              >
-                <span className="size-6">{link.icon}</span>
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{link.name}</p>
-            </TooltipContent>
-          </Tooltip>
-        ))}
       </div>
     </Container>
   );

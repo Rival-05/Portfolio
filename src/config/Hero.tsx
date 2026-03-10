@@ -50,7 +50,7 @@ export const heroConfig = {
 
   description: {
     template:
-      "I build interactive web applications using {skills:0}, {skills:1}, {skills:2} and {skills:3} focusing on performance, clarity, and smooth user experiences.",
+      "I am a final year CSE undergraduate and I build interactive web apps using {skills:0}, {skills:1}, {skills:2} and {skills:3} focusing on performance, clarity, and smooth user experiences.",
   },
 
   buttons: [

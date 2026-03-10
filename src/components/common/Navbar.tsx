@@ -12,10 +12,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-backdrop-filter:bg-white/60">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-backdrop-filter:bg-white/10">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          {/* Brand/Logo */}
           <Link
             href={navigationConfig.brand.href}
             className="flex items-center space-x-2"
@@ -30,7 +29,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Navigation Links */}
           <nav className="flex items-center space-x-2">
             {navigationConfig.mainNav.map((item) => (
               <Link key={item.href} href={item.href}>

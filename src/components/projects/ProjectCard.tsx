@@ -1,10 +1,10 @@
 import { Card, CardContent, CardHeader, CardFooter } from "../ui/card";
 import { Link } from "next-view-transitions";
-import ArrowRight from "../svgs/ArrowRight";
+import { Project } from "@/types/project";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import ArrowRight from "../svgs/ArrowRight";
 import Github from "../technologies/Github";
 import Website from "../svgs/Website";
-import { Project } from "@/types/project";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -26,14 +26,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardHeader>
 
-      <CardContent className="px-4 pt-2">
-        <div className="space-y-3">
+      <CardContent className="px-6 h-full">
+        <div className="flex flex-col gap-3 h-full">
           <div className="flex items-center justify-between">
-            <Link href={project.projectDetailsPageSlug}>
-              <h3 className=" text-xl leading-tight font-semibold hover:cursor-pointer">
-                {project.title}
-              </h3>
-            </Link>
+            <h3 className=" text-lg leading-tight font-semibold">
+              {project.title}
+            </h3>
             <div className="flex items-center gap-3">
               <Tooltip>
                 <TooltipTrigger>
@@ -70,17 +68,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </div>
           </div>
 
-          <p className="text-secondary line-clamp-3">{project.description}</p>
+          <p className="text-secondary text-sm line-clamp-3">
+            {project.description}
+          </p>
 
-          <div>
-            <h4 className="text-secondary mb-2 text-base font-semibold">
+          <div className="mt-auto">
+            <h4 className="text-secondary mb-2 text-sm font-semibold">
               Technologies
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((technology, index) => (
                 <Tooltip key={index}>
                   <TooltipTrigger>
-                    <div className="size-6 transition-all duration-300 hover:scale-110 hover:cursor-pointer">
+                    <div className="size-6 transition-all duration-300 hover:scale-110 cursor-pointer">
                       {technology.icon}
                     </div>
                   </TooltipTrigger>
@@ -116,7 +116,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             )}
           </div>
           <Link
-            href={project.projectDetailsPageSlug}
+            href="/projects"
             className="group text-secondary hover:text-primary flex items-center gap-2 text-sm underline-offset-3 transition-colors hover:underline"
           >
             View Details{" "}

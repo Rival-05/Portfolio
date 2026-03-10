@@ -1,37 +1,77 @@
 import Container from "@/components/common/Container";
 import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
+import { generateMetadata as getMetadata } from "@/config/Meta";
+import { getPublishedBlogPosts } from "@/lib/blog";
+import { Metadata } from "next";
+import { Robots } from "next/dist/lib/metadata/types/metadata-types";
+import { Suspense } from "react";
+import { BlogPageClient } from "./BlogPageClient";
 
-export default function BlogPage() {
+export const generateMetadata = (): Metadata => {
+  const metadata = getMetadata("/blog");
+  return {
+    ...metadata,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      } as Robots["googleBot"],
+    },
+  };
+};
+
+function BlogPageLoading() {
   return (
     <Container className="py-16">
       <div className="space-y-8">
-        {/* Header */}
+        {/* Header Skeleton */}
         <div className="space-y-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-            Blog
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-neutral-600">
-            Thoughts, tutorials, and insights about web development.
-          </p>
+          <Skeleton className="mx-auto h-12 w-32" />
+          <Skeleton className="mx-auto h-6 w-96" />
         </div>
 
         <Separator />
 
-        {/* Blog Posts List - Placeholder */}
+        {/* Tags Skeleton */}
+        <div className="space-y-4">
+          <Skeleton className="h-6 w-32" />
+          <div className="flex flex-wrap gap-2">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Skeleton key={i} className="h-8 w-20" />
+            ))}
+          </div>
+        </div>
+
+        {/* Blog Posts Skeleton */}
         <div className="space-y-6">
-          {/* We'll add blog post cards here later */}
-          <article className="rounded-lg border border-neutral-200 p-6">
-            <h2 className="mb-2 text-2xl font-semibold">Blog Post 1</h2>
-            <p className="mb-4 text-sm text-neutral-500">March 6, 2026</p>
-            <p className="text-neutral-600">Coming soon...</p>
-          </article>
-          <article className="rounded-lg border border-neutral-200 p-6">
-            <h2 className="mb-2 text-2xl font-semibold">Blog Post 2</h2>
-            <p className="mb-4 text-sm text-neutral-500">March 5, 2026</p>
-            <p className="text-neutral-600">Coming soon...</p>
-          </article>
+          <Skeleton className="h-8 w-48" />
+          <div className="space-y-4">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="space-y-2">
+                <Skeleton className="h-6 w-3/4" />
+                <Skeleton className="h-4 w-1/2" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Container>
+  );
+}
+
+export default function BlogPage() {
+  const allPosts = getPublishedBlogPosts();
+
+  return (
+    <Suspense fallback={<BlogPageLoading />}>
+      <BlogPageClient initialPosts={allPosts} />
+    </Suspense>
   );
 }

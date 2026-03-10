@@ -2,8 +2,8 @@ export default function Linkedin() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       fill="#666666"
       viewBox="0 0 256 256"
       className="hover:fill-sky-700 transition-colors duration-200"

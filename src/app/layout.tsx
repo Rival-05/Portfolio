@@ -27,11 +27,11 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" className={hanken_grotesk.className}>
         <body className={`antialiased`}>
-          <Navbar />
-          <main className="flex-1">
-            <TooltipProvider>{children}</TooltipProvider>
-          </main>
-          <Footer />
+          <TooltipProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </TooltipProvider>
         </body>
       </html>
     </ViewTransitions>
