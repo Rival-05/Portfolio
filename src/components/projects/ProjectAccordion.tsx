@@ -11,6 +11,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectAccordionProps {
   projects: Project[];
@@ -27,8 +28,8 @@ export function ProjectAccordion({ projects }: ProjectAccordionProps) {
 
   return (
     <Accordion type="multiple" className="w-full px-4">
-      {projects.map((project, index) => (
-        <AccordionItem key={index} value={`project-${index}`}>
+      {projects.map((project) => (
+        <AccordionItem key={project.id} value={`project-${project.id}`}>
           <AccordionTrigger className="hover:no-underline">
             <div className="flex w-full items-start justify-between gap-4 pr-4">
               <div className="flex-1 text-left">
@@ -71,6 +72,15 @@ export function ProjectAccordion({ projects }: ProjectAccordionProps) {
 
           <AccordionContent>
             <div className="space-y-6 pt-2">
+              {/*Project Image*/}
+              <div className="relative aspect-video w-full overflow-hidden rounded-md">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               {/* Technologies & Tools */}
               <div>
                 <h4 className="mb-3 text-base  font-semibold">Technologies</h4>

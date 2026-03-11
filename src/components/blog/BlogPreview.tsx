@@ -40,7 +40,7 @@ export function BlogPreview({ post }: BlogCardProps) {
 
         <Link
           href={`/blog/${slug}`}
-          className=" group text-secondary  flex items-center gap-2 text-sm underline-offset-3  hover:underline"
+          className="group text-secondary flex items-center gap-2 text-sm underline-offset-3 hover:underline"
         >
           Read
           <ArrowRight className="size-3 transition-transform duration-300 group-hover:translate-x-1" />

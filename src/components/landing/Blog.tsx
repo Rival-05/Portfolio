@@ -10,7 +10,7 @@ export default function Blog() {
 
   return (
     <Container className="mt-20 max-w-4xl">
-      <SectionHeading subheading="Latest archieve" heading="Blog" />
+      <SectionHeading subheading="Latest archieve" heading="Blogs" />
 
       <div className="mt-10 space-y-10">
         {posts.slice(0, 3).map((post) => (

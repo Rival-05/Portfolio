@@ -69,14 +69,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
-      <Container className="py-16">
-        <div className="space-y-12">
+      <Container className="py-10">
+        <div className="space-y-8">
           {/* Back Button */}
           <div>
-            <Button variant="ghost" asChild className="group">
-              <Link href="/blog" className="flex items-center space-x-2">
+            <Button variant="ghost">
+              <Link href="/blog" className="flex items-center space-x-2 ">
                 <ArrowLeft className="size-4" />
-                <span>Back to Blog</span>
+                <span>Back to Blogs</span>
               </Link>
             </Button>
           </div>

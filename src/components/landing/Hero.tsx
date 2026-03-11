@@ -1,12 +1,11 @@
-import { heroConfig, skillComponents, socialLinks } from "@/config/Hero";
+import { heroConfig, skillComponents } from "@/config/Hero";
 import { parseTemplate } from "@/lib/hero";
 import { cn } from "@/lib/utils";
 import { Link } from "next-view-transitions";
+import { Button } from "../ui/button";
 import Container from "../common/Container";
 import Skill from "../common/Skill";
 import Chat from "../svgs/Chat";
-import { Button } from "../ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const buttonIcons = {
   Chat: Chat,

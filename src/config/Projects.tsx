@@ -11,6 +11,7 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    id: 1,
     title: "Decentracert",
     description:
       "A decentralized certificate authority built to provide secure and transparent digital certificate management.",
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 2,
     title: "DormDesk",
     description:
       "DormDesk is a sleek hostel issue management platform that allows residents to quickly register maintenance complaints, track their resolution status and updates.",

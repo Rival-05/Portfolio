@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Container from "./Container";
 import { Separator } from "@/components/ui/separator";
 import { socialLinks } from "@/config/Hero";
 import {
@@ -7,25 +5,29 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { footerConfig } from "@/config/Footer";
+import Link from "next/link";
+import Container from "./Container";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <Container>
       <Separator />
-      <div className="flex items-center justify-between py-8">
+      <div className="flex items-center justify-between py-6">
         <div className="flex items-baseline text-secondary justify-between gap-2">
           <p className="text-sm font-medium gap-2 flex items-center ">
-            © {currentYear}
+            {footerConfig.copyrightSymbol} {currentYear}
             <Link
               href={`${socialLinks[0].href}`}
               key={`${socialLinks[0].name}`}
               className="hover:underline underline-offset-3 transition-all duration-300"
             >
-              Rajat Tripathi.
+              {footerConfig.copyrightName}.
             </Link>
           </p>
-          <span className="text-xs">All rights reserved.</span>
+          <span className="text-xs">{footerConfig.copyright}</span>
         </div>
         <div className="flex gap-1">
           {socialLinks.map((link) => (
