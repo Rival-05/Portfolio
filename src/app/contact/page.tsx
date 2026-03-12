@@ -22,20 +22,20 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Container className="py-8">
+    <Container className="py-6 sm:py-8 lg:py-10">
       <div className="space-y-6">
         <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold tracking-tight lg:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {contactConfig.title}
           </h1>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-base leading-7 sm:text-lg">
             {contactConfig.description}
           </p>
         </div>
         <Separator />
 
         {/* Contact Form */}
-        <div className="mx-auto max-w-2xl">
+        <div className="mx-auto w-full max-w-2xl">
           <ContactForm />
         </div>
       </div>

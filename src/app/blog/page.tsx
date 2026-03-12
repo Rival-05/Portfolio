@@ -28,12 +28,12 @@ export const generateMetadata = (): Metadata => {
 
 function BlogPageLoading() {
   return (
-    <Container className="py-10">
+    <Container className="py-6 sm:py-8 lg:py-10">
       <div className="space-y-8">
         {/* Header Skeleton */}
-        <div className="space-y-4 text-center">
-          <Skeleton className="mx-auto h-12 w-32" />
-          <Skeleton className="mx-auto h-6 w-96" />
+        <div className="space-y-4 text-left">
+          <Skeleton className="h-10 w-32 sm:h-12" />
+          <Skeleton className="h-6 w-full max-w-md" />
         </div>
 
         <Separator />

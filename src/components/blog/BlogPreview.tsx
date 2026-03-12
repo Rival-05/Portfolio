@@ -18,16 +18,16 @@ export function BlogPreview({ post }: BlogCardProps) {
   });
 
   return (
-    <article className="border p-4 rounded-md">
-      <div className="flex items-start justify-between gap-6">
-        <div className="max-w-2xl space-y-3">
+    <article className="rounded-md border p-4 sm:p-5">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+        <div className="min-w-0 max-w-2xl space-y-3">
           <Link href={`/blog/${slug}`}>
-            <h3 className="text-lg leading-tight font-semibold transition-colors hover:text-neutral-700">
+            <h3 className="text-lg font-semibold leading-tight transition-colors hover:text-neutral-700 sm:text-xl">
               {title}
             </h3>
           </Link>
 
-          <p className="text-sm text-neutral-500">{description}</p>
+          <p className="text-sm leading-6 text-neutral-500">{description}</p>
 
           <time
             dateTime={date}
@@ -40,7 +40,7 @@ export function BlogPreview({ post }: BlogCardProps) {
 
         <Link
           href={`/blog/${slug}`}
-          className="group text-secondary flex items-center gap-2 text-sm underline-offset-3 hover:underline"
+          className="group text-secondary flex items-center gap-2 self-start text-sm underline-offset-3 hover:underline sm:self-center"
         >
           Read
           <ArrowRight className="size-3 transition-transform duration-300 group-hover:translate-x-1" />

@@ -26,13 +26,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardHeader>
 
-      <CardContent className="px-6 h-full">
-        <div className="flex flex-col gap-3 h-full">
-          <div className="flex items-center justify-between">
-            <h3 className=" text-lg leading-tight font-semibold">
+      <CardContent className="h-full px-4 sm:px-6">
+        <div className="flex h-full flex-col gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <h3 className="text-lg font-semibold leading-tight sm:text-xl">
               {project.title}
             </h3>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 sm:shrink-0">
               <Tooltip>
                 <TooltipTrigger>
                   <Link
@@ -68,7 +68,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </div>
           </div>
 
-          <p className="text-secondary text-sm line-clamp-3">
+          <p className="text-secondary text-sm leading-6 line-clamp-4 sm:line-clamp-3">
             {project.description}
           </p>
 
@@ -95,7 +95,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardContent>
 
       {project.details && (
-        <CardFooter className="flex justify-between p-6 pt-0">
+        <CardFooter className="flex flex-col items-start justify-between gap-3 p-4 pt-0 sm:flex-row sm:items-center sm:px-6 sm:pb-6">
           <div
             className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs ${
               project.isworking

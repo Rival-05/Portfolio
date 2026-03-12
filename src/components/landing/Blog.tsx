@@ -12,7 +12,7 @@ export default function Blog() {
     <Container className="mt-20 max-w-4xl">
       <SectionHeading subheading="Latest archieve" heading="Blogs" />
 
-      <div className="mt-10 space-y-10">
+      <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
         {posts.slice(0, 3).map((post) => (
           <BlogPreview key={post.slug} post={post} />
         ))}

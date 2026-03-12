@@ -20,15 +20,19 @@ export function BlogContent({ frontmatter, content }: BlogContentProps) {
   });
 
   return (
-    <article className="mx-auto max-w-4xl">
+    <article className="mx-auto min-w-0 max-w-4xl">
       <header className="mb-8 space-y-6">
         <div className="space-y-4">
-          <h1 className="text-4xl leading-tight font-bold ">{title}</h1>
+          <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            {title}
+          </h1>
 
-          <p className="text-muted-foreground text-xl">{description}</p>
+          <p className="text-muted-foreground text-lg leading-7 sm:text-xl">
+            {description}
+          </p>
 
           <div className="text-muted-foreground flex items-center gap-2 text-sm">
-            <Calendar className="size-6" />
+            <Calendar className="size-5 sm:size-6" />
             <time dateTime={date}>{formattedDate}</time>
           </div>
         </div>
@@ -37,7 +41,7 @@ export function BlogContent({ frontmatter, content }: BlogContentProps) {
       </header>
 
       {/* Content */}
-      <div className="prose prose-neutral dark:prose-invert max-w-none">
+      <div className="prose prose-sm max-w-none wrap-break-word prose-pre:max-w-full prose-pre:overflow-x-auto prose-img:h-auto prose-img:w-full prose-headings:scroll-mt-24 prose-a:break-all prose-code:break-words prose-neutral sm:prose-base dark:prose-invert">
         <MDXRemote
           source={content}
           components={BlogComponents}

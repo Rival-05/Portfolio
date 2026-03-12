@@ -46,21 +46,21 @@ export default function Hero() {
   return (
     <Container className="mx-auto max-w-5xl">
       {/* Text Area */}
-      <div className="mt-8 flex flex-col gap-2">
-        <h1 className="text-4xl font-semibold ">
+      <div className="mt-4 flex flex-col gap-3 sm:mt-8">
+        <h1 className="max-w-4xl text-3xl md:text-4xl font-semibold tracking-tight ">
           <span className="bg-linear-to-b from-gray-500 via-gray-700 to-gray-800 bg-clip-text text-transparent">
             Hi, I&apos;m {name} —
           </span>{" "}
           <span className="text-primary/40">{title}</span>
         </h1>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base whitespace-pre-wrap text-neutral-700 md:text-lg">
+        <div className="mt-2 flex max-w-3xl flex-wrap items-center gap-x-1.5 gap-y-2 whitespace-pre-wrap text-sm text-neutral-700 sm:mt-4 sm:text-base md:text-lg">
           {renderDescription()}
         </div>
       </div>
 
       {/* Buttons */}
-      <div className="mt-8 flex gap-4">
+      <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
         {buttons.map((button, index) => {
           const IconComponent =
             buttonIcons[button.icon as keyof typeof buttonIcons];
@@ -69,12 +69,18 @@ export default function Hero() {
               key={index}
               variant={button.variant as "outline" | "default"}
               className={cn(
+                "w-full sm:w-auto",
                 button.variant === "outline" && "inset-shadow-indigo-500",
                 button.variant === "default" && "inset-shadow-indigo-500",
               )}
             >
-              {IconComponent && <IconComponent />}
-              <Link href={button.href}>{button.text}</Link>
+              <Link
+                href={button.href}
+                className="flex items-center justify-center gap-2"
+              >
+                {IconComponent && <IconComponent />}
+                <span>{button.text}</span>
+              </Link>
             </Button>
           );
         })}

@@ -15,7 +15,9 @@ export default function ProjectList({ projects, className }: ProjectListProps) {
     );
   }
   return (
-    <div className={`${className} grid grid-cols-1 gap-4 md:grid-cols-2`}>
+    <div
+      className={`${className} grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-2`}
+    >
       {projects.map((project: Project) => (
         <ProjectCard key={project.title} project={project} />
       ))}

@@ -106,13 +106,13 @@ export default function ContactForm() {
 
   return (
     <Card className="border-none bg-transparent shadow-none">
-      <CardHeader>
+      <CardHeader className="px-0 pb-4">
         <CardTitle>Fill in your details</CardTitle>
         <CardDescription>
           I will get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-0">
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-6"
@@ -203,7 +203,11 @@ export default function ContactForm() {
             />
           </FieldGroup>
 
-          <Button type="submit" className="w-fit" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            className="w-full sm:w-fit"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />

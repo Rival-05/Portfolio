@@ -27,26 +27,26 @@ export function ProjectAccordion({ projects }: ProjectAccordionProps) {
   }
 
   return (
-    <Accordion type="multiple" className="w-full px-4">
+    <Accordion type="multiple" className="w-full">
       {projects.map((project) => (
         <AccordionItem key={project.id} value={`project-${project.id}`}>
           <AccordionTrigger className="hover:no-underline">
-            <div className="flex w-full items-start justify-between gap-4 pr-4">
-              <div className="flex-1 text-left">
+            <div className="flex w-full flex-col items-start gap-4 pr-2 text-left sm:flex-row sm:justify-between sm:pr-4">
+              <div className="min-w-0 flex-1 text-left">
                 <Link
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-lg hover:underline hover:underline-offset-3 duration-200 leading-tight"
+                  className="text-lg font-semibold leading-tight duration-200 hover:underline hover:underline-offset-3 sm:text-xl"
                 >
                   {project.title}
                 </Link>
 
-                <p className="text-muted-foreground mt-1 text-sm">
+                <p className="text-muted-foreground mt-1 text-sm leading-6">
                   {project.description}
                 </p>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 sm:shrink-0">
                 <div
                   className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs ${
                     project.isworking
@@ -83,7 +83,7 @@ export function ProjectAccordion({ projects }: ProjectAccordionProps) {
               </div>
               {/* Technologies & Tools */}
               <div>
-                <h4 className="mb-3 text-base  font-semibold">Technologies</h4>
+                <h4 className="mb-3 text-base font-semibold">Technologies</h4>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech, idx) => (
                     <Tooltip key={idx}>
@@ -106,7 +106,7 @@ export function ProjectAccordion({ projects }: ProjectAccordionProps) {
                   {project.whatIBuilt.map((achievement, idx) => (
                     <li
                       key={idx}
-                      className="text-muted-foreground flex items-start gap-2 text-sm"
+                      className="text-muted-foreground flex items-start gap-2 text-sm leading-6"
                     >
                       <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-current" />
                       <span>{achievement}</span>

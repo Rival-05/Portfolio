@@ -19,7 +19,7 @@ export const BlogComponents = {
       alt={alt}
       width={800}
       height={400}
-      className="rounded-lg"
+      className="h-auto w-full rounded-lg"
       {...props}
     />
   ),
@@ -31,7 +31,7 @@ export const BlogComponents = {
     children: React.ReactNode;
     [key: string]: unknown;
   }) => (
-    <h1 className="mb-6 text-4xl font-bold" {...props}>
+    <h1 className="mb-6 text-3xl font-bold sm:text-4xl" {...props}>
       {children}
     </h1>
   ),
@@ -42,7 +42,7 @@ export const BlogComponents = {
     children: React.ReactNode;
     [key: string]: unknown;
   }) => (
-    <h2 className="mt-8 mb-4 text-3xl font-semibold" {...props}>
+    <h2 className="mt-8 mb-4 text-2xl font-semibold sm:text-3xl" {...props}>
       {children}
     </h2>
   ),
@@ -53,7 +53,7 @@ export const BlogComponents = {
     children: React.ReactNode;
     [key: string]: unknown;
   }) => (
-    <h3 className="mt-6 mb-3 text-2xl font-medium" {...props}>
+    <h3 className="mt-6 mb-3 text-xl font-medium sm:text-2xl" {...props}>
       {children}
     </h3>
   ),
@@ -137,7 +137,7 @@ export const BlogComponents = {
     return (
       <div className="group relative mb-4">
         <pre
-          className="bg-muted/30 overflow-x-auto rounded-lg border p-4 text-sm [&>code]:bg-transparent [&>code]:p-0"
+          className="bg-muted/30 overflow-x-auto rounded-lg border p-3 text-xs sm:p-4 sm:text-sm [&>code]:bg-transparent [&>code]:p-0"
           {...props}
         >
           {children}
