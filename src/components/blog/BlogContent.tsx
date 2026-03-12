@@ -23,9 +23,7 @@ export function BlogContent({ frontmatter, content }: BlogContentProps) {
     <article className="mx-auto max-w-4xl">
       <header className="mb-8 space-y-6">
         <div className="space-y-4">
-          <h1 className="text-4xl leading-tight font-bold lg:text-5xl">
-            {title}
-          </h1>
+          <h1 className="text-4xl leading-tight font-bold ">{title}</h1>
 
           <p className="text-muted-foreground text-xl">{description}</p>
 

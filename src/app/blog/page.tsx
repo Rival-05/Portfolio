@@ -28,7 +28,7 @@ export const generateMetadata = (): Metadata => {
 
 function BlogPageLoading() {
   return (
-    <Container className="py-16">
+    <Container className="py-10">
       <div className="space-y-8">
         {/* Header Skeleton */}
         <div className="space-y-4 text-center">
@@ -37,16 +37,6 @@ function BlogPageLoading() {
         </div>
 
         <Separator />
-
-        {/* Tags Skeleton */}
-        <div className="space-y-4">
-          <Skeleton className="h-6 w-32" />
-          <div className="flex flex-wrap gap-2">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Skeleton key={i} className="h-8 w-20" />
-            ))}
-          </div>
-        </div>
 
         {/* Blog Posts Skeleton */}
         <div className="space-y-6">

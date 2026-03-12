@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className={hanken_grotesk.className}>
-        <body className={`antialiased`}>
+        <body className={`antialiased min-h-screen flex flex-col`}>
           <Toaster
             position="bottom-right"
             options={{
