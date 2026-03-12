@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
-import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
 import { ViewTransitions } from "next-view-transitions";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "sileo";
+import UmamiAnalytics from "@/components/analytics/UmamiAnalytics";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 
 import "./globals.css";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <UmamiAnalytics />
           </TooltipProvider>
         </body>
       </html>
