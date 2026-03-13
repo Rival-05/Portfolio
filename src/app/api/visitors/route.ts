@@ -34,8 +34,8 @@ async function fetchUmamiStats(url: string, apiKey: string) {
 }
 
 export async function GET() {
-    const websiteId = process.env.UMAMI_WEBSITE_ID;
-    const apiKey = process.env.UMAMI_API_KEY;
+    const websiteId = process.env.UMAMI_WEBSITE_ID?.trim();
+    const apiKey = process.env.UMAMI_API_KEY?.trim();
 
     if (!websiteId || !apiKey) {
         return NextResponse.json(
@@ -102,12 +102,9 @@ export async function GET() {
         }
 
         return NextResponse.json(
-            { count: 0, visitors: 0, pageviews: 0, stale: true, error: 'Failed to fetch visitor count' },
+            { error: 'Failed to fetch visitor count' },
             {
-                status: 200,
-                headers: {
-                    "Cache-Control": "public, s-maxage=30, stale-while-revalidate=120",
-                },
+                status: 503,
             }
         );
     }

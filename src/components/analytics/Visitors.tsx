@@ -5,6 +5,7 @@ import Eye from "../svgs/Eye";
 
 export default function Visitors() {
   const [totalVisitors, setTotalVisitors] = useState<number | null>(null);
+  const [isUnavailable, setIsUnavailable] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -16,12 +17,20 @@ export default function Visitors() {
 
         const data = await res.json();
         if (isMounted) {
-          setTotalVisitors(
-            typeof data?.visitors === "number" ? data.visitors : 0,
-          );
+          if (typeof data?.visitors === "number") {
+            setTotalVisitors(data.visitors);
+            setIsUnavailable(false);
+            return;
+          }
+
+          setTotalVisitors(null);
+          setIsUnavailable(true);
         }
       } catch {
-        if (isMounted) setTotalVisitors(0);
+        if (isMounted) {
+          setTotalVisitors(null);
+          setIsUnavailable(true);
+        }
       }
     };
 
@@ -36,7 +45,7 @@ export default function Visitors() {
     <div className="flex items-center gap-1 text-secondary">
       <Eye />
       <span className="text-sm font-semibold tracking-wide">
-        {totalVisitors ?? "..."} Visitors
+        {isUnavailable ? "N/A" : (totalVisitors ?? "...")} Visitors
       </span>
     </div>
   );
